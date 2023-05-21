@@ -6,9 +6,9 @@
 #include <Adafruit_ST7735.h>  // Hardware-specific library for ST7735
 #include <SPI.h>
 
-#define TFT_CS D1   // PyBadge/PyGamer display control pins: chip select
-#define TFT_RST D0  // Display reset
-#define TFT_DC D2   // Display data/command select
+#define TFT_CS D1   // PyBadge/PyGamer display control pins: chip select.
+#define TFT_RST D0  // Display reset.
+#define TFT_DC D2   // Display data/command select.
 
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
@@ -85,7 +85,7 @@ void setup(void) {
   tft.setRotation(1);
 
   clear();
-  dinoY = dinoBaseY;  // at middel of track
+  dinoY = dinoBaseY;  // At middle of track
 
   // idle
   uint8_t counter = 0;
@@ -103,7 +103,7 @@ void setup(void) {
     if (press == LOW) break;
     delay(10);
   }
-  // during game start  the dino jumps and dino lands and moves little forward
+  // During game start  the dino jumps and dino lands and moves little forward
 
   // start jump animation
   dinoJmp();
